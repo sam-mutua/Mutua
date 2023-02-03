@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 STA 2203 Labwork | Solutions to Labwork and Assignments</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 STA 2203 Labwork | Solutions to Labwork and Assignments" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 STA 2203 Labwork | Solutions to Labwork and Assignments" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  
+
+<meta name="author" content="Mutua Samuel" />
+
+
+<meta name="date" content="2023-02-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="sta-2203-assignment.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/tabwid-1.1.2/tabwid.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Solutions to LabWork and Assignment</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#relevant-groups"><i class="fa fa-check"></i><b>1.1</b> Relevant Groups</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#not-for"><i class="fa fa-check"></i><b>1.2</b> Not for</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#request"><i class="fa fa-check"></i><b>1.3</b> Request</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="sta-2203-labwork.html"><a href="sta-2203-labwork.html"><i class="fa fa-check"></i><b>2</b> STA 2203 Labwork</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="sta-2203-labwork.html"><a href="sta-2203-labwork.html#labwork-one"><i class="fa fa-check"></i><b>2.1</b> Labwork One</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="sta-2203-labwork.html"><a href="sta-2203-labwork.html#time-series-components"><i class="fa fa-check"></i><b>2.1.1</b> Time Series Components</a></li>
+<li class="chapter" data-level="2.1.2" data-path="sta-2203-labwork.html"><a href="sta-2203-labwork.html#simulating-a-random-walk-process"><i class="fa fa-check"></i><b>2.1.2</b> Simulating a Random Walk Process</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="sta-2203-labwork.html"><a href="sta-2203-labwork.html#labwork-two"><i class="fa fa-check"></i><b>2.2</b> Labwork Two</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="sta-2203-labwork.html"><a href="sta-2203-labwork.html#fitting-a-linear-regression"><i class="fa fa-check"></i><b>2.2.1</b> Fitting a linear regression</a></li>
+<li class="chapter" data-level="2.2.2" data-path="sta-2203-labwork.html"><a href="sta-2203-labwork.html#fitting-an-exponential-curve"><i class="fa fa-check"></i><b>2.2.2</b> Fitting an Exponential Curve</a></li>
+<li class="chapter" data-level="2.2.3" data-path="sta-2203-labwork.html"><a href="sta-2203-labwork.html#moving-average-in-r"><i class="fa fa-check"></i><b>2.2.3</b> Moving Average in R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sta-2203-assignment.html"><a href="sta-2203-assignment.html"><i class="fa fa-check"></i><b>3</b> STA 2203 Assignment</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sta-2203-assignment.html"><a href="sta-2203-assignment.html#assignment-one"><i class="fa fa-check"></i><b>3.1</b> Assignment One</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sta-2307-labwork.html"><a href="sta-2307-labwork.html"><i class="fa fa-check"></i><b>4</b> STA 2307 Labwork</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="sta-2307-labwork.html"><a href="sta-2307-labwork.html#labwork-1"><i class="fa fa-check"></i><b>4.1</b> Labwork 1</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sta-2307-assignments.html"><a href="sta-2307-assignments.html"><i class="fa fa-check"></i><b>5</b> STA 2307 Assignments</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="sta-2307-assignments.html"><a href="sta-2307-assignments.html#assignment-1"><i class="fa fa-check"></i><b>5.1</b> Assignment 1</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="cats-sta-2203.html"><a href="cats-sta-2203.html"><i class="fa fa-check"></i><b>6</b> CATS STA 2203</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="cats-sta-2203.html"><a href="cats-sta-2203.html#cat-1"><i class="fa fa-check"></i><b>6.1</b> CAT 1</a></li>
+<li class="chapter" data-level="6.2" data-path="cats-sta-2203.html"><a href="cats-sta-2203.html#cat-2"><i class="fa fa-check"></i><b>6.2</b> CAT 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="cats-sta-2207.html"><a href="cats-sta-2207.html"><i class="fa fa-check"></i><b>7</b> CATS STA 2207</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="cats-sta-2207.html"><a href="cats-sta-2207.html#cat-1-1"><i class="fa fa-check"></i><b>7.1</b> CAT 1</a></li>
+<li class="chapter" data-level="7.2" data-path="cats-sta-2207.html"><a href="cats-sta-2207.html#cat-2-1"><i class="fa fa-check"></i><b>7.2</b> CAT 2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Solutions to Labwork and Assignments</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sta-2203-labwork" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> STA 2203 Labwork<a href="sta-2203-labwork.html#sta-2203-labwork" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This section gives all the solutions to the lab work so far done in the period of lecture.</p>
+<div id="labwork-one" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Labwork One<a href="sta-2203-labwork.html#labwork-one" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The first lab work was geared to enable the student to be able to plot a basic time series and be able to describe the data set. The packages used include <code>dplyr, lubridate, rKenyaForex, ggplot2</code>.</p>
+<p>To install the above packages:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="sta-2203-labwork.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;dplyr&quot;</span>,<span class="st">&quot;lubridate&quot;</span>, <span class="st">&quot;rKenyaForex&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>))</span></code></pre></div>
+<p>We used in build data called <code>kenyaforex</code> to do a visualization of the exchange of Kenya Shilling versus US Dollar.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="sta-2203-labwork.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading the packages</span></span>
+<span id="cb2-2"><a href="sta-2203-labwork.html#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="sta-2203-labwork.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rKenyaForex)</span>
+<span id="cb2-4"><a href="sta-2203-labwork.html#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="sta-2203-labwork.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-6"><a href="sta-2203-labwork.html#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="sta-2203-labwork.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb2-8"><a href="sta-2203-labwork.html#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="sta-2203-labwork.html#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-10"><a href="sta-2203-labwork.html#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="sta-2203-labwork.html#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># loading the data</span></span>
+<span id="cb2-12"><a href="sta-2203-labwork.html#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="sta-2203-labwork.html#cb2-13" aria-hidden="true" tabindex="-1"></a>Kenya <span class="ot">&lt;-</span> kenyaforex <span class="sc">%&gt;%</span> </span>
+<span id="cb2-14"><a href="sta-2203-labwork.html#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Currency <span class="sc">==</span> <span class="st">&quot;US DOLLAR&quot;</span>)</span>
+<span id="cb2-15"><a href="sta-2203-labwork.html#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="sta-2203-labwork.html#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to time series</span></span>
+<span id="cb2-17"><a href="sta-2203-labwork.html#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="sta-2203-labwork.html#cb2-18" aria-hidden="true" tabindex="-1"></a>Kenya<span class="sc">$</span>Date <span class="ot">&lt;-</span> <span class="fu">ymd</span>(Kenya<span class="sc">$</span>Date)</span>
+<span id="cb2-19"><a href="sta-2203-labwork.html#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="sta-2203-labwork.html#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ploting</span></span>
+<span id="cb2-21"><a href="sta-2203-labwork.html#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="sta-2203-labwork.html#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Kenya, <span class="fu">aes</span>(<span class="at">x =</span> Date, <span class="at">y =</span> Mean)) <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="at">col =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="time-series-components" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Time Series Components<a href="sta-2203-labwork.html#time-series-components" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This section demonstrates how to do a visualization of the components of time series in R using the example of <code>AirPassengers</code> data inbuilt in R</p>
+<div id="trend-component" class="section level4 unnumbered hasAnchor">
+<h4>Trend Component<a href="sta-2203-labwork.html#trend-component" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="sta-2203-labwork.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data </span></span>
+<span id="cb3-2"><a href="sta-2203-labwork.html#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="sta-2203-labwork.html#cb3-3" aria-hidden="true" tabindex="-1"></a>Dec <span class="ot">&lt;-</span> <span class="fu">decompose</span>(AirPassengers)</span>
+<span id="cb3-4"><a href="sta-2203-labwork.html#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="sta-2203-labwork.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># trend component</span></span>
+<span id="cb3-6"><a href="sta-2203-labwork.html#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="sta-2203-labwork.html#cb3-7" aria-hidden="true" tabindex="-1"></a>Trend <span class="ot">&lt;-</span> Dec<span class="sc">$</span>trend</span>
+<span id="cb3-8"><a href="sta-2203-labwork.html#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="sta-2203-labwork.html#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># plot </span></span>
+<span id="cb3-10"><a href="sta-2203-labwork.html#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="sta-2203-labwork.html#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ts.plot</span>(Trend, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="seasonal-component" class="section level4 unnumbered hasAnchor">
+<h4>Seasonal Component<a href="sta-2203-labwork.html#seasonal-component" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="sta-2203-labwork.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data </span></span>
+<span id="cb4-2"><a href="sta-2203-labwork.html#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="sta-2203-labwork.html#cb4-3" aria-hidden="true" tabindex="-1"></a>Dec <span class="ot">&lt;-</span> <span class="fu">decompose</span>(AirPassengers)</span>
+<span id="cb4-4"><a href="sta-2203-labwork.html#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="sta-2203-labwork.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># seasonal component</span></span>
+<span id="cb4-6"><a href="sta-2203-labwork.html#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="sta-2203-labwork.html#cb4-7" aria-hidden="true" tabindex="-1"></a>Seas <span class="ot">&lt;-</span> Dec<span class="sc">$</span>seasonal</span>
+<span id="cb4-8"><a href="sta-2203-labwork.html#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="sta-2203-labwork.html#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># plot </span></span>
+<span id="cb4-10"><a href="sta-2203-labwork.html#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="sta-2203-labwork.html#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ts.plot</span>(Seas, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="random-component" class="section level4 unnumbered hasAnchor">
+<h4>Random Component<a href="sta-2203-labwork.html#random-component" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="sta-2203-labwork.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data </span></span>
+<span id="cb5-2"><a href="sta-2203-labwork.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="sta-2203-labwork.html#cb5-3" aria-hidden="true" tabindex="-1"></a>Dec <span class="ot">&lt;-</span> <span class="fu">decompose</span>(AirPassengers)</span>
+<span id="cb5-4"><a href="sta-2203-labwork.html#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="sta-2203-labwork.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># random component</span></span>
+<span id="cb5-6"><a href="sta-2203-labwork.html#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="sta-2203-labwork.html#cb5-7" aria-hidden="true" tabindex="-1"></a>RW <span class="ot">&lt;-</span> Dec<span class="sc">$</span>random</span>
+<span id="cb5-8"><a href="sta-2203-labwork.html#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="sta-2203-labwork.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># plot </span></span>
+<span id="cb5-10"><a href="sta-2203-labwork.html#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="sta-2203-labwork.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ts.plot</span>(RW, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+</div>
+<div id="simulating-a-random-walk-process" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Simulating a Random Walk Process<a href="sta-2203-labwork.html#simulating-a-random-walk-process" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A random walk process is given as:</p>
+<p><span class="math display">\[Y_{t} = Y_{t-1} + e_{t}\]</span></p>
+<p>The above process can be simulated as:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="sta-2203-labwork.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># simulating the random walk </span></span>
+<span id="cb6-2"><a href="sta-2203-labwork.html#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="sta-2203-labwork.html#cb6-3" aria-hidden="true" tabindex="-1"></a>RaW <span class="ot">&lt;-</span> <span class="cf">function</span>(N, Y0, mean, sd)</span>
+<span id="cb6-4"><a href="sta-2203-labwork.html#cb6-4" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb6-5"><a href="sta-2203-labwork.html#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># define error terms</span></span>
+<span id="cb6-6"><a href="sta-2203-labwork.html#cb6-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-7"><a href="sta-2203-labwork.html#cb6-7" aria-hidden="true" tabindex="-1"></a>  e <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(<span class="fu">rnorm</span>(<span class="at">n =</span> N, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span>sd))</span>
+<span id="cb6-8"><a href="sta-2203-labwork.html#cb6-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-9"><a href="sta-2203-labwork.html#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># process </span></span>
+<span id="cb6-10"><a href="sta-2203-labwork.html#cb6-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-11"><a href="sta-2203-labwork.html#cb6-11" aria-hidden="true" tabindex="-1"></a>  Y <span class="ot">&lt;-</span> Y0 <span class="sc">+</span> e</span>
+<span id="cb6-12"><a href="sta-2203-labwork.html#cb6-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-13"><a href="sta-2203-labwork.html#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># time </span></span>
+<span id="cb6-14"><a href="sta-2203-labwork.html#cb6-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-15"><a href="sta-2203-labwork.html#cb6-15" aria-hidden="true" tabindex="-1"></a>  t <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span>N</span>
+<span id="cb6-16"><a href="sta-2203-labwork.html#cb6-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-17"><a href="sta-2203-labwork.html#cb6-17" aria-hidden="true" tabindex="-1"></a>  Results <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(t, Y)</span>
+<span id="cb6-18"><a href="sta-2203-labwork.html#cb6-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-19"><a href="sta-2203-labwork.html#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(Results)</span>
+<span id="cb6-20"><a href="sta-2203-labwork.html#cb6-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-21"><a href="sta-2203-labwork.html#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="sta-2203-labwork.html#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co"># data </span></span>
+<span id="cb6-23"><a href="sta-2203-labwork.html#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-24"><a href="sta-2203-labwork.html#cb6-24" aria-hidden="true" tabindex="-1"></a>Data <span class="ot">&lt;-</span> <span class="fu">RaW</span>(<span class="dv">100</span>,<span class="dv">10</span>,<span class="dv">0</span>,<span class="dv">1</span>)</span>
+<span id="cb6-25"><a href="sta-2203-labwork.html#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="sta-2203-labwork.html#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co"># plot</span></span>
+<span id="cb6-27"><a href="sta-2203-labwork.html#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="sta-2203-labwork.html#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-29"><a href="sta-2203-labwork.html#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="sta-2203-labwork.html#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Data, <span class="fu">aes</span>(<span class="at">x =</span> t, <span class="at">y =</span> Y)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">theme_bw</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Time&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Random Walk&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+</div>
+<div id="labwork-two" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Labwork Two<a href="sta-2203-labwork.html#labwork-two" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="fitting-a-linear-regression" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Fitting a linear regression<a href="sta-2203-labwork.html#fitting-a-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This example uses the data given in class.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="sta-2203-labwork.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reading in the data</span></span>
+<span id="cb7-2"><a href="sta-2203-labwork.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="sta-2203-labwork.html#cb7-3" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>,<span class="sc">-</span><span class="dv">2</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)</span>
+<span id="cb7-4"><a href="sta-2203-labwork.html#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="sta-2203-labwork.html#cb7-5" aria-hidden="true" tabindex="-1"></a>Xt <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">67</span>,<span class="dv">88</span>,<span class="dv">94</span>,<span class="dv">85</span>, <span class="dv">91</span>, <span class="dv">98</span>, <span class="dv">90</span>)</span>
+<span id="cb7-6"><a href="sta-2203-labwork.html#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="sta-2203-labwork.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Model </span></span>
+<span id="cb7-8"><a href="sta-2203-labwork.html#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="sta-2203-labwork.html#cb7-9" aria-hidden="true" tabindex="-1"></a>Model <span class="ot">&lt;-</span> <span class="fu">lm</span>(Xt <span class="sc">~</span> t)</span>
+<span id="cb7-10"><a href="sta-2203-labwork.html#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="sta-2203-labwork.html#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Model output </span></span>
+<span id="cb7-12"><a href="sta-2203-labwork.html#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="sta-2203-labwork.html#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span>
+<span id="cb7-14"><a href="sta-2203-labwork.html#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="sta-2203-labwork.html#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="fu">as_flextable</span>(Model)</span></code></pre></div>
+<template id="147cb805-966f-4602-a6f5-7a8ba4444545"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  border-color: transparent;
+  caption-side: top;
+}
+.tabwid-caption-bottom table{
+  caption-side: bottom;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td, .tabwid th {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+.katex-display {
+    margin: 0 0 !important;
+}
+</style><div class="tabwid"><style>.cl-a5f1ddd0{}.cl-a5e460d8{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-a5e460ec{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:italic;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-a5ea2e3c{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a5ea2e46{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a5ea4aa2{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4aac{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4aad{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4aae{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4ab6{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4ab7{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4ab8{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4ac0{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4ac1{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4aca{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4acb{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4ad4{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4ad5{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4ade{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4adf{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4ae0{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4ae8{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4ae9{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4af2{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4afc{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4afd{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4afe{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4aff{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4b06{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a5ea4b07{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-a5f1ddd0'><thead><tr style="overflow-wrap:break-word;"><th class="cl-a5ea4aa2"><p class="cl-a5ea2e3c"><span class="cl-a5e460d8"></span></p></th><th class="cl-a5ea4aac"><p class="cl-a5ea2e46"><span class="cl-a5e460d8">Estimate</span></p></th><th class="cl-a5ea4aad"><p class="cl-a5ea2e46"><span class="cl-a5e460d8">Standard Error</span></p></th><th class="cl-a5ea4aae"><p class="cl-a5ea2e46"><span class="cl-a5e460d8">t value</span></p></th><th class="cl-a5ea4aae"><p class="cl-a5ea2e46"><span class="cl-a5e460d8">Pr(&gt;|t|)</span></p></th><th class="cl-a5ea4ab6"><p class="cl-a5ea2e3c"><span class="cl-a5e460d8"></span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-a5ea4ab7"><p class="cl-a5ea2e3c"><span class="cl-a5e460d8">(Intercept)</span></p></td><td class="cl-a5ea4ab8"><p class="cl-a5ea2e46"><span class="cl-a5e460d8">87.258</span></p></td><td class="cl-a5ea4ac0"><p class="cl-a5ea2e46"><span class="cl-a5e460d8">3.183</span></p></td><td class="cl-a5ea4ac1"><p class="cl-a5ea2e46"><span class="cl-a5e460d8">27.415</span></p></td><td class="cl-a5ea4ac1"><p class="cl-a5ea2e46"><span class="cl-a5e460d8">0.0000</span></p></td><td class="cl-a5ea4aca"><p class="cl-a5ea2e3c"><span class="cl-a5e460d8">***</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a5ea4acb"><p class="cl-a5ea2e3c"><span class="cl-a5e460d8">t</span></p></td><td class="cl-a5ea4ad4"><p class="cl-a5ea2e46"><span class="cl-a5e460d8">2.191</span></p></td><td class="cl-a5ea4ad5"><p class="cl-a5ea2e46"><span class="cl-a5e460d8">1.179</span></p></td><td class="cl-a5ea4ade"><p class="cl-a5ea2e46"><span class="cl-a5e460d8">1.858</span></p></td><td class="cl-a5ea4ade"><p class="cl-a5ea2e46"><span class="cl-a5e460d8">0.1223</span></p></td><td class="cl-a5ea4adf"><p class="cl-a5ea2e3c"><span class="cl-a5e460d8">   </span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td  colspan="6"class="cl-a5ea4ae0"><p class="cl-a5ea2e46"><span class="cl-a5e460ec">Signif. codes: 0 &lt;= '***' &lt; 0.001 &lt; '**' &lt; 0.01 &lt; '*' &lt; 0.05</span></p></td></tr><tr style="overflow-wrap:break-word;"><td  colspan="6"class="cl-a5ea4afd"><p class="cl-a5ea2e3c"><span class="cl-a5e460d8"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td  colspan="6"class="cl-a5ea4afd"><p class="cl-a5ea2e3c"><span class="cl-a5e460d8">Residual standard error: 8.409 on 5 degrees of freedom</span></p></td></tr><tr style="overflow-wrap:break-word;"><td  colspan="6"class="cl-a5ea4afd"><p class="cl-a5ea2e3c"><span class="cl-a5e460d8">Multiple R-squared: 0.4085, Adjusted R-squared: 0.2901</span></p></td></tr><tr style="overflow-wrap:break-word;"><td  colspan="6"class="cl-a5ea4afd"><p class="cl-a5ea2e3c"><span class="cl-a5e460d8">F-statistic: 3.452 on 5 and 1 DF, p-value: 0.1223</span></p></td></tr></tfoot></table></div></template>
+<div class="flextable-shadow-host" id="20376403-22b1-4c10-abb5-b7e2c64ec341"></div>
+<script>
+var dest = document.getElementById("20376403-22b1-4c10-abb5-b7e2c64ec341");
+var template = document.getElementById("147cb805-966f-4602-a6f5-7a8ba4444545");
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<p>Though the fitted model is not significant it is used for demonstration purposes only.</p>
+<p>The trend values are extracted as follows</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="sta-2203-labwork.html#cb8-1" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>,<span class="sc">-</span><span class="dv">2</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)</span>
+<span id="cb8-2"><a href="sta-2203-labwork.html#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="sta-2203-labwork.html#cb8-3" aria-hidden="true" tabindex="-1"></a>Xt <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">67</span>,<span class="dv">88</span>,<span class="dv">94</span>,<span class="dv">85</span>, <span class="dv">91</span>, <span class="dv">98</span>, <span class="dv">90</span>)</span>
+<span id="cb8-4"><a href="sta-2203-labwork.html#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="sta-2203-labwork.html#cb8-5" aria-hidden="true" tabindex="-1"></a>Model <span class="ot">&lt;-</span> <span class="fu">lm</span>(Xt <span class="sc">~</span> t)</span>
+<span id="cb8-6"><a href="sta-2203-labwork.html#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="sta-2203-labwork.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># data</span></span>
+<span id="cb8-8"><a href="sta-2203-labwork.html#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="sta-2203-labwork.html#cb8-9" aria-hidden="true" tabindex="-1"></a>DataF <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(t, Xt)</span>
+<span id="cb8-10"><a href="sta-2203-labwork.html#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="sta-2203-labwork.html#cb8-11" aria-hidden="true" tabindex="-1"></a>DataF<span class="sc">$</span>Trend <span class="ot">&lt;-</span> Model<span class="sc">$</span>fitted.values</span>
+<span id="cb8-12"><a href="sta-2203-labwork.html#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="sta-2203-labwork.html#cb8-13" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(DataF)</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">t</th>
+<th align="right">Xt</th>
+<th align="right">Trend</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">-4</td>
+<td align="right">67</td>
+<td align="right">78.49438</td>
+</tr>
+<tr class="even">
+<td align="right">-2</td>
+<td align="right">88</td>
+<td align="right">82.87640</td>
+</tr>
+<tr class="odd">
+<td align="right">-1</td>
+<td align="right">94</td>
+<td align="right">85.06742</td>
+</tr>
+<tr class="even">
+<td align="right">0</td>
+<td align="right">85</td>
+<td align="right">87.25843</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">91</td>
+<td align="right">89.44944</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">98</td>
+<td align="right">91.64045</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">90</td>
+<td align="right">98.21348</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="fitting-an-exponential-curve" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Fitting an Exponential Curve<a href="sta-2203-labwork.html#fitting-an-exponential-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We demonstrated how to fit an exponential curve to data.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="sta-2203-labwork.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data</span></span>
+<span id="cb9-2"><a href="sta-2203-labwork.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="sta-2203-labwork.html#cb9-3" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">25</span>,<span class="dv">25</span>,<span class="fl">27.9</span>,<span class="fl">31.9</span>,<span class="fl">36.1</span>, <span class="fl">43.9</span>,<span class="fl">54.7</span>)</span>
+<span id="cb9-4"><a href="sta-2203-labwork.html#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="sta-2203-labwork.html#cb9-5" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb9-6"><a href="sta-2203-labwork.html#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="sta-2203-labwork.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Model</span></span>
+<span id="cb9-8"><a href="sta-2203-labwork.html#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="sta-2203-labwork.html#cb9-9" aria-hidden="true" tabindex="-1"></a>Model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(Y) <span class="sc">~</span> t)</span>
+<span id="cb9-10"><a href="sta-2203-labwork.html#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="sta-2203-labwork.html#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">as_flextable</span>(Model2)</span></code></pre></div>
+<template id="c8cd8936-7623-44b1-a844-dead42ecd1e5"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  border-color: transparent;
+  caption-side: top;
+}
+.tabwid-caption-bottom table{
+  caption-side: bottom;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td, .tabwid th {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+.katex-display {
+    margin: 0 0 !important;
+}
+</style><div class="tabwid"><style>.cl-a64acf6c{}.cl-a63fb488{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-a63fb492{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:italic;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-a644bf8c{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a644bf96{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a644d80a{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d81e{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d81f{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d820{width:0.837in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d828{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d829{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d82a{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d832{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d833{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d83c{width:0.837in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d83d{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d83e{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d846{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d847{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d848{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d850{width:0.837in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d851{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d85a{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d85b{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d85c{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d864{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d865{width:0.837in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d86e{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d86f{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d870{width:0.981in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d878{width:0.88in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d879{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d87a{width:0.837in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d882{width:0.752in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a644d883{width:0.4in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-a64acf6c'><thead><tr style="overflow-wrap:break-word;"><th class="cl-a644d80a"><p class="cl-a644bf8c"><span class="cl-a63fb488"></span></p></th><th class="cl-a644d81e"><p class="cl-a644bf96"><span class="cl-a63fb488">Estimate</span></p></th><th class="cl-a644d81f"><p class="cl-a644bf96"><span class="cl-a63fb488">Standard Error</span></p></th><th class="cl-a644d820"><p class="cl-a644bf96"><span class="cl-a63fb488">t value</span></p></th><th class="cl-a644d828"><p class="cl-a644bf96"><span class="cl-a63fb488">Pr(&gt;|t|)</span></p></th><th class="cl-a644d829"><p class="cl-a644bf8c"><span class="cl-a63fb488"></span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-a644d82a"><p class="cl-a644bf8c"><span class="cl-a63fb488">(Intercept)</span></p></td><td class="cl-a644d832"><p class="cl-a644bf96"><span class="cl-a63fb488">3.514</span></p></td><td class="cl-a644d833"><p class="cl-a644bf96"><span class="cl-a63fb488">0.029</span></p></td><td class="cl-a644d83c"><p class="cl-a644bf96"><span class="cl-a63fb488">122.922</span></p></td><td class="cl-a644d83d"><p class="cl-a644bf96"><span class="cl-a63fb488">0.0000</span></p></td><td class="cl-a644d83e"><p class="cl-a644bf8c"><span class="cl-a63fb488">***</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a644d846"><p class="cl-a644bf8c"><span class="cl-a63fb488">t</span></p></td><td class="cl-a644d847"><p class="cl-a644bf96"><span class="cl-a63fb488">0.133</span></p></td><td class="cl-a644d848"><p class="cl-a644bf96"><span class="cl-a63fb488">0.014</span></p></td><td class="cl-a644d850"><p class="cl-a644bf96"><span class="cl-a63fb488">9.326</span></p></td><td class="cl-a644d851"><p class="cl-a644bf96"><span class="cl-a63fb488">0.0002</span></p></td><td class="cl-a644d85a"><p class="cl-a644bf8c"><span class="cl-a63fb488">***</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td  colspan="6"class="cl-a644d85b"><p class="cl-a644bf96"><span class="cl-a63fb492">Signif. codes: 0 &lt;= '***' &lt; 0.001 &lt; '**' &lt; 0.01 &lt; '*' &lt; 0.05</span></p></td></tr><tr style="overflow-wrap:break-word;"><td  colspan="6"class="cl-a644d870"><p class="cl-a644bf8c"><span class="cl-a63fb488"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td  colspan="6"class="cl-a644d870"><p class="cl-a644bf8c"><span class="cl-a63fb488">Residual standard error: 0.07564 on 5 degrees of freedom</span></p></td></tr><tr style="overflow-wrap:break-word;"><td  colspan="6"class="cl-a644d870"><p class="cl-a644bf8c"><span class="cl-a63fb488">Multiple R-squared: 0.9456, Adjusted R-squared: 0.9348</span></p></td></tr><tr style="overflow-wrap:break-word;"><td  colspan="6"class="cl-a644d870"><p class="cl-a644bf8c"><span class="cl-a63fb488">F-statistic: 86.98 on 5 and 1 DF, p-value: 0.0002</span></p></td></tr></tfoot></table></div></template>
+<div class="flextable-shadow-host" id="17e3dfe0-7d86-4b66-b764-68d894dfc0a8"></div>
+<script>
+var dest = document.getElementById("17e3dfe0-7d86-4b66-b764-68d894dfc0a8");
+var template = document.getElementById("c8cd8936-7623-44b1-a844-dead42ecd1e5");
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="sta-2203-labwork.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># exponentiating the coefficients</span></span>
+<span id="cb10-2"><a href="sta-2203-labwork.html#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="sta-2203-labwork.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(Model2<span class="sc">$</span>coefficients)</span></code></pre></div>
+<pre><code>## (Intercept)           t 
+##   33.587392    1.142605</code></pre>
+</div>
+<div id="moving-average-in-r" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Moving Average in R<a href="sta-2203-labwork.html#moving-average-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>During the lecture we did Moving Average as a method of eliminating trend.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="sta-2203-labwork.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zoo)</span></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;zoo&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     as.Date, as.Date.numeric</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="sta-2203-labwork.html#cb15-1" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>)</span>
+<span id="cb15-2"><a href="sta-2203-labwork.html#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="sta-2203-labwork.html#cb15-3" aria-hidden="true" tabindex="-1"></a>Obs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
+<span id="cb15-4"><a href="sta-2203-labwork.html#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="sta-2203-labwork.html#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 3 point MA</span></span>
+<span id="cb15-6"><a href="sta-2203-labwork.html#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="sta-2203-labwork.html#cb15-7" aria-hidden="true" tabindex="-1"></a>KD <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(t, Obs)</span>
+<span id="cb15-8"><a href="sta-2203-labwork.html#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="sta-2203-labwork.html#cb15-9" aria-hidden="true" tabindex="-1"></a>KD<span class="sc">$</span>MA3 <span class="ot">&lt;-</span> <span class="fu">rollmean</span>(Obs, <span class="at">k =</span> <span class="dv">3</span>, <span class="at">fill =</span> <span class="cn">NA</span>)</span>
+<span id="cb15-10"><a href="sta-2203-labwork.html#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="sta-2203-labwork.html#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 4 point MA</span></span>
+<span id="cb15-12"><a href="sta-2203-labwork.html#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="sta-2203-labwork.html#cb15-13" aria-hidden="true" tabindex="-1"></a>KD<span class="sc">$</span>MA4 <span class="ot">&lt;-</span> <span class="fu">rollmean</span>(Obs, <span class="at">k =</span> <span class="dv">4</span>, <span class="at">fill =</span> <span class="cn">NA</span>)</span>
+<span id="cb15-14"><a href="sta-2203-labwork.html#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="sta-2203-labwork.html#cb15-15" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(KD)</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">t</th>
+<th align="right">Obs</th>
+<th align="right">MA3</th>
+<th align="right">MA4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">4.5</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">5</td>
+<td align="right">5</td>
+<td align="right">5.5</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">6</td>
+<td align="right">6</td>
+<td align="right">6.5</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">7</td>
+<td align="right">7</td>
+<td align="right">7.5</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">8</td>
+<td align="right">8</td>
+<td align="right">NA</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">9</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sta-2203-assignment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-intro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

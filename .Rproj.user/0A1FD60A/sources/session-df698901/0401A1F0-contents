@@ -1,0 +1,232 @@
+# STA 2203 Labwork 
+
+This section gives all the solutions to the lab work so far done in the period of lecture. 
+
+## Labwork One
+
+The first lab work was geared to enable the student to be able to plot a basic time series and be able to describe the data set. The packages used include `dplyr, lubridate, rKenyaForex, ggplot2`.
+
+To install the above packages:
+
+
+```{r, eval=FALSE}
+install.packages(c("dplyr","lubridate", "rKenyaForex", "ggplot2"))
+```
+
+
+We used in build data called `kenyaforex` to do a visualization of the exchange of Kenya Shilling versus US Dollar. 
+
+
+```{r, warning=FALSE, message=FALSE}
+# loading the packages
+
+library(rKenyaForex)
+
+library(dplyr)
+
+library(lubridate)
+
+library(ggplot2)
+
+# loading the data
+
+Kenya <- kenyaforex %>% 
+  filter(Currency == "US DOLLAR")
+
+# Convert to time series
+
+Kenya$Date <- ymd(Kenya$Date)
+
+# ploting
+
+ggplot(Kenya, aes(x = Date, y = Mean)) + geom_line(col = "blue") + theme_bw()
+```
+
+### Time Series Components
+
+This section demonstrates how to do a visualization of the components of time series in R using the example of `AirPassengers` data inbuilt in R
+
+#### Trend Component {-}
+
+```{r}
+# data 
+
+Dec <- decompose(AirPassengers)
+
+# trend component
+
+Trend <- Dec$trend
+
+# plot 
+
+ts.plot(Trend, col = "red")
+```
+
+
+#### Seasonal Component {-}
+
+```{r}
+# data 
+
+Dec <- decompose(AirPassengers)
+
+# seasonal component
+
+Seas <- Dec$seasonal
+
+# plot 
+
+ts.plot(Seas, col = "red")
+```
+
+#### Random Component {-}
+
+```{r}
+# data 
+
+Dec <- decompose(AirPassengers)
+
+# random component
+
+RW <- Dec$random
+
+# plot 
+
+ts.plot(RW, col = "red")
+```
+
+### Simulating a Random Walk Process
+
+A random walk process is given as:
+
+
+$$Y_{t} = Y_{t-1} + e_{t}$$
+
+The above process can be simulated as:
+
+
+```{r}
+# simulating the random walk 
+
+RaW <- function(N, Y0, mean, sd)
+{
+  # define error terms
+  
+  e <- cumsum(rnorm(n = N, mean = 0, sd =sd))
+  
+  # process 
+  
+  Y <- Y0 + e
+  
+  # time 
+  
+  t <- 1:N
+  
+  Results <- data.frame(t, Y)
+  
+  return(Results)
+}
+
+# data 
+
+Data <- RaW(100,10,0,1)
+
+# plot
+
+library(ggplot2)
+
+ggplot(Data, aes(x = t, y = Y)) + geom_line() + theme_bw() + labs(x = "Time", y = "Random Walk")
+```
+
+
+## Labwork Two
+
+### Fitting a linear regression 
+
+This example uses the data given in class.
+
+```{r}
+# reading in the data
+
+t <- c(-4,-2,-1,0,1,2,5)
+
+Xt <- c(67,88,94,85, 91, 98, 90)
+
+# Model 
+
+Model <- lm(Xt ~ t)
+
+# Model output 
+
+library(flextable)
+
+as_flextable(Model)
+```
+
+Though the fitted model is not significant it is used for demonstration purposes only.
+
+The trend values are extracted as follows
+
+```{r}
+t <- c(-4,-2,-1,0,1,2,5)
+
+Xt <- c(67,88,94,85, 91, 98, 90)
+
+Model <- lm(Xt ~ t)
+
+# data
+
+DataF <- data.frame(t, Xt)
+
+DataF$Trend <- Model$fitted.values
+
+knitr::kable(DataF)
+```
+
+### Fitting an Exponential Curve
+
+We demonstrated how to fit an exponential curve to data.
+
+```{r}
+# data
+
+Y <- c(25,25,27.9,31.9,36.1, 43.9,54.7)
+
+t <- c(-3, -2, -1, 0, 1, 2, 3)
+
+# Model
+
+Model2 <- lm(log(Y) ~ t)
+
+as_flextable(Model2)
+
+# exponentiating the coefficients
+
+exp(Model2$coefficients)
+```
+
+
+### Moving Average in R
+
+During the lecture we did Moving Average as a method of eliminating trend.
+
+```{r}
+library(zoo)
+
+t <- c(1,2,3,4,5,6,7)
+
+Obs <- c(3,4,5,6,7,8,9)
+
+# 3 point MA
+
+KD <- data.frame(t, Obs)
+
+KD$MA3 <- rollmean(Obs, k = 3, fill = NA)
+
+# 4 point MA
+
+KD$MA4 <- rollmean(Obs, k = 4, fill = NA)
+
+knitr::kable(KD)
+```
+

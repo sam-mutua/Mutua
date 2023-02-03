@@ -1,0 +1,43 @@
+--- 
+title: "Solutions to Labwork and Assignments"
+author: "Mutua Samuel"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography:
+- book.bib
+- packages.bib
+description: |
+  This is a minimal example of using the bookdown package to write a book.
+  set in the _output.yml file.
+  The HTML output format for this example is bookdown::gitbook,
+link-citations: yes
+github-repo: "rstudio/bookdown-demo"
+---
+
+# About
+
+This course book gives solutions to labwork and assignments given during the semester January to April 2023.
+
+All solutions are reproducible.
+
+The courses covered include:
+
+- STA 2203: Time Series Analysis
+
+- STA 2307: Statistical Quality Control
+
+*Note that the labwork and the assignment should not be treated as real examinations but a sample of what the student is expected to get*
+
+## Relevant Groups
+
+This course solutions is for *undergraduate students* taking the respective courses and any person interested in Mathematical Statistics
+
+## Not for
+
+Any students who fails to attend the lectures may find it difficult following some of the concepts given here. 
+
+
+## Request
+
+Any concerns about the solutions should be addressed during the lecture lessons. Enjoy the read!!
